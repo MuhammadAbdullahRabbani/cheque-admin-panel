@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { signInWithEmailAndPassword } from "firebase/auth";
 import { auth } from "../firebaseConfig";
-import bsfLogo from "../assets/bsfLogo.png";
+import actor from "../assets/actor.png";
 
 export default function Login() {
   const [form, setForm] = useState({ email: "", password: "" });
@@ -25,7 +25,7 @@ export default function Login() {
   return (
     <div className="center-screen">
       <div className="card auth-card">
-        <img src={bsfLogo} alt="BSF" className="logo" />
+        <img src={actor} alt="BSF" className="logo" />
         <h1 className="title gold">BSF Admin Login</h1>
         <p className="muted small">Sign in with your admin email</p>
 
