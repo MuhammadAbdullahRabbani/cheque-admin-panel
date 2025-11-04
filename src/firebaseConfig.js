@@ -3,12 +3,12 @@ import { getAuth } from "firebase/auth";
 import { getFirestore } from "firebase/firestore";
 
 const firebaseConfig = {
-  apiKey: "AIzaSyDAjATqddnde-KPKC3sHt8ghLh_sJWWVz8",
-  authDomain: "bsf-cheque-app.firebaseapp.com",
-  projectId: "bsf-cheque-app",
-  storageBucket: "bsf-cheque-app.firebasestorage.app",
-  messagingSenderId: "549943148915",
-  appId: "1:549943148915:web:47f2f7171e8b4a65e50506"
+   apiKey: import.meta.env.VITE_FIREBASE_API_KEY,
+  authDomain: import.meta.env.VITE_FIREBASE_AUTH_DOMAIN,
+  projectId: import.meta.env.VITE_FIREBASE_PROJECT_ID,
+  storageBucket: import.meta.env.VITE_FIREBASE_STORAGE_BUCKET,
+  messagingSenderId: import.meta.env.VITE_FIREBASE_MESSAGING_SENDER_ID,
+  appId: import.meta.env.VITE_FIREBASE_APP_ID,
 };
 
 
