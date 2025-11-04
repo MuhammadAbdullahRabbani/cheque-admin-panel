@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { signInWithEmailAndPassword } from "firebase/auth";
 import { auth } from "../firebaseConfig";
-import bsfLogo from "../assets/bsfLogo.png";
+import bsfLogo from "../assets/bsflogo.png";
 
 export default function Login() {
   const [form, setForm] = useState({ email: "", password: "" });
