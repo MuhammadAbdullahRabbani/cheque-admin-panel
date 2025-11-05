@@ -1,3 +1,4 @@
+
 /* === CORE THEME: Jet Black Golden Mode === */
 :root {
   --bg: #0b0b0c;
@@ -1665,4 +1666,7 @@ body {
     width: 60px;
     height: 60px;
   }
+}
+body {
+  background: radial-gradient(circle at top center, #0f0f0f 0%, #000000 100%);
 }
