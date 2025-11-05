@@ -16,6 +16,8 @@ import {
   FaTrash,
   FaSave,
 } from "react-icons/fa";
+import "../styles/ChequeTable.css";
+
 
 export default function ChequeTable({ rows }) {
   const [editModal, setEditModal] = useState(false);

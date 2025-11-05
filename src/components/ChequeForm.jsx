@@ -13,6 +13,8 @@ import "../App.css";
 import { toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import { labelOf } from "../utils/labelOf";
+import "../styles/ChequeForm.css";
+
 
 const STATUS = ["valid", "not_valid", "paid"];
 

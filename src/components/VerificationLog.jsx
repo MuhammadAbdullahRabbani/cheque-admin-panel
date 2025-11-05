@@ -9,6 +9,8 @@ import {
   writeBatch,
   doc,            // ✅ needed for deletes
 } from "firebase/firestore";
+import "../styles/VerificationLog.css";
+
 
 export default function VerificationLog() {
   const [logs, setLogs] = useState([]);

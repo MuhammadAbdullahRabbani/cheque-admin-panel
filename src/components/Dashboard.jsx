@@ -5,6 +5,8 @@ import Header from "./Header";
 import ChequeForm from "./ChequeForm";
 import ChequeTable from "./ChequeTable";
 import VerificationLog from "./VerificationLog";
+import "../styles/Dashboard.css";
+
 import { collection, onSnapshot, orderBy, query } from "firebase/firestore";
 import {
   FaClipboardList,

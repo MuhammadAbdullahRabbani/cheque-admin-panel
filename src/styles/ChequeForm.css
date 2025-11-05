@@ -1,0 +1,278 @@
+/* =====================================
+   💳 BSF Cheque Form — Golden UI Theme
+   ===================================== */
+
+/* Card container */
+.cheque-form {
+  background: rgba(15, 15, 15, 0.9);
+  border: 1px solid rgba(255, 215, 0, 0.08);
+  border-radius: 18px;
+  padding: 30px 26px;
+  box-shadow: 0 0 25px rgba(255, 215, 0, 0.08);
+  transition: all 0.3s ease;
+  color: #fff;
+}
+.cheque-form:hover {
+  box-shadow: 0 0 35px rgba(255, 215, 0, 0.12);
+  border-color: rgba(255, 215, 0, 0.2);
+}
+
+/* Title + Subtitle */
+.section-title {
+  text-align: center;
+  color: #ffd700;
+  font-family: "Playfair Display", serif;
+  font-size: 1.6rem;
+  font-weight: 700;
+  margin-bottom: 10px;
+}
+.gold-text {
+  color: #ffd700;
+}
+.input-label {
+  color: #ffd700;
+  font-weight: 600;
+  text-align: center;
+  margin-bottom: 8px;
+  font-size: 1rem;
+}
+
+/* Layout */
+.form-grid {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  margin-top: 20px;
+}
+
+/* ---------------------------
+   Cheque Number Input Boxes
+------------------------------*/
+.cheque-input-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 20px;
+}
+.digit-box-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 6px;
+  margin-top: 6px;
+}
+.prefix {
+  font-weight: 700;
+  color: #ffd700;
+  font-size: 1.1rem;
+  margin-right: 6px;
+  letter-spacing: 1px;
+  text-shadow: 0 0 8px rgba(255, 215, 0, 0.3);
+}
+.hyphen {
+  color: #ffd700;
+  font-weight: bold;
+  margin: 0 5px;
+}
+.digit-box {
+  width: 42px;
+  height: 46px;
+  text-align: center;
+  font-size: 1.1rem;
+  border-radius: 8px;
+  border: 1px solid #333;
+  background: #0c0c0c;
+  color: #fff;
+  transition: all 0.25s ease;
+}
+.digit-box:focus {
+  border-color: #ffd700;
+  box-shadow: 0 0 10px rgba(255, 215, 0, 0.5);
+  outline: none;
+}
+
+/* Duplicate detection effects */
+.dup-glow {
+  border-color: #ff4444 !important;
+  box-shadow: 0 0 12px rgba(255, 50, 50, 0.6) !important;
+}
+.shake {
+  animation: shake 0.4s ease;
+}
+@keyframes shake {
+  0%, 100% { transform: translateX(0); }
+  25% { transform: translateX(-6px); }
+  50% { transform: translateX(6px); }
+  75% { transform: translateX(-3px); }
+}
+
+/* ---------------------------
+   Inputs + Dropdown
+------------------------------*/
+.input,
+.modern-input {
+  width: 100%;
+  background: #000;
+  border: 1px solid rgba(255, 215, 0, 0.2);
+  padding: 10px 12px;
+  border-radius: 10px;
+  color: #fff;
+  font-size: 0.95rem;
+  transition: all 0.3s ease;
+}
+.input:focus,
+.modern-input:focus {
+  border-color: #ffd700;
+  box-shadow: 0 0 10px rgba(255, 215, 0, 0.4);
+  outline: none;
+}
+
+/* Custom Dropdown */
+.dropdown-wrapper {
+  position: relative;
+  width: 100%;
+}
+.dropdown-display {
+  width: 100%;
+  text-align: left;
+  background: linear-gradient(145deg, #0f0f0f, #151515);
+  color: #f6f6f6;
+  border: 1px solid rgba(255, 215, 0, 0.5);
+  border-radius: 10px;
+  padding: 12px 16px;
+  font-size: 0.95rem;
+  cursor: pointer;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  transition: all 0.25s ease;
+  box-shadow: inset 0 0 6px rgba(255, 215, 0, 0.1);
+}
+.dropdown-display:hover {
+  border-color: #ffd700;
+  box-shadow: 0 0 12px rgba(255, 215, 0, 0.25);
+}
+.dropdown-display .arrow {
+  color: #ffd700;
+  font-size: 0.8rem;
+  transition: transform 0.3s ease;
+}
+.dropdown-wrapper.open .arrow {
+  transform: rotate(180deg);
+}
+.dropdown-menu {
+  position: absolute;
+  top: calc(100% + 6px);
+  left: 0;
+  width: 100%;
+  background: rgba(15, 15, 15, 0.95);
+  border: 1px solid rgba(255, 215, 0, 0.3);
+  border-radius: 10px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
+  list-style: none;
+  margin: 0;
+  padding: 6px 0;
+  z-index: 10;
+  animation: fadeIn 0.25s ease;
+}
+.dropdown-item {
+  padding: 10px 16px;
+  color: #f6f6f6;
+  font-size: 0.9rem;
+  cursor: pointer;
+  transition: all 0.25s ease;
+}
+.dropdown-item:hover {
+  background: rgba(255, 215, 0, 0.12);
+  color: #ffecb3;
+}
+.dropdown-item.active {
+  background: rgba(255, 215, 0, 0.2);
+  color: #ffd95b;
+  font-weight: 600;
+}
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(-4px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* ---------------------------
+   Buttons
+------------------------------*/
+.actions {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 14px;
+  margin-top: 20px;
+}
+.btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  font-weight: 600;
+  font-size: 0.95rem;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  border: none;
+  padding: 10px 22px;
+}
+.btn.gold-btn {
+  background: linear-gradient(135deg, #ffd700, #c5a019);
+  color: #111;
+  box-shadow: 0 0 15px rgba(255, 215, 0, 0.3);
+}
+.btn.gold-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 0 20px rgba(255, 215, 0, 0.4);
+}
+.btn.outline.danger-btn {
+  background: transparent;
+  border: 1.5px solid #ef4444;
+  color: #ffbdbd;
+}
+.btn.outline.danger-btn:hover {
+  background: rgba(239, 68, 68, 0.1);
+  box-shadow: 0 0 12px rgba(239, 68, 68, 0.4);
+  transform: translateY(-2px);
+}
+
+/* ---------------------------
+   RESPONSIVENESS
+------------------------------*/
+@media (max-width: 768px) {
+  .cheque-form {
+    padding: 22px 20px;
+  }
+  .digit-box {
+    width: 36px;
+    height: 40px;
+    font-size: 1rem;
+  }
+  .prefix {
+    font-size: 1rem;
+  }
+}
+@media (max-width: 480px) {
+  .cheque-form {
+    padding: 18px;
+  }
+  .digit-box-container {
+    gap: 4px;
+  }
+  .digit-box {
+    width: 30px;
+    height: 36px;
+    font-size: 0.9rem;
+  }
+  .actions {
+    flex-direction: column;
+    gap: 10px;
+  }
+  .btn {
+    width: 100%;
+  }
+}

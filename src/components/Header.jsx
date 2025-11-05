@@ -1,5 +1,6 @@
 import { FaPowerOff } from "react-icons/fa";
 import bsfLogo from "../assets/bsfLogo.svg";
+import "../styles/Header.css";
 
 export default function Header({ userEmail, onLogout }) {
   return (
