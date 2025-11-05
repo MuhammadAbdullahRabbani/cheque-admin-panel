@@ -1,17 +1,19 @@
 /* 🌟 Global background */
+/* 🌟 Fullscreen background (no extra padding or scroll) */
 .login-page {
-  height: 100vh;
+  min-height: 100vh;
   width: 100vw;
   background: radial-gradient(circle at center, #0c0c0c, #000);
   display: flex;
   align-items: center;
   justify-content: center;
   font-family: "Poppins", sans-serif;
-  padding: 20px;
   overflow: hidden;
+  margin: 0;
+  padding: 0;
 }
 
-/* 🟡 Floating Card — glassy look */
+/* 🟡 Floating Card — responsive and perfectly centered */
 .login-card {
   width: 100%;
   max-width: 400px;
@@ -24,7 +26,24 @@
   border: 1px solid rgba(255, 215, 0, 0.2);
   backdrop-filter: blur(8px);
   transition: all 0.4s ease;
+  box-sizing: border-box;
 }
+
+/* 📱 Mobile responsiveness */
+@media (max-width: 600px) {
+  .login-page {
+    align-items: flex-start;
+    justify-content: center;
+  }
+
+  .login-card {
+    margin-top: 12vh; /* visually centered without cutting off top */
+    padding: 32px 24px;
+    border-radius: 16px;
+    box-shadow: 0 0 25px rgba(255, 215, 0, 0.15);
+  }
+}
+
 
 .logo-wrap {
   display: flex;
